@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS Buku (
     id INT,
     judul VARCHAR(255) NOT NULL,
     tahun_terbit INT NOT NULL,
-
-    /* Git = Version Control */
+    tipe ENUM ("Fiksi", "Non Fiksi") NOT NULL,
+    genre ENUM ("Fantasi", "Horror", "Romantis", "Historical", "Biografi", "Memoir", "Ensiklopedia", "Sains") NOT NULL,
     PRIMARY KEY id
 );
