@@ -41,6 +41,6 @@ CREATE TABLE Chapter (
     id INT NOT NULL,
     judul VARCHAR(255) NOT NULL,
     halaman INT NOT NULL,
-    judul INT NOT NULL,
+    jumlah_halaman INT NOT NULL,
     PRIMARY KEY (id)
 );
