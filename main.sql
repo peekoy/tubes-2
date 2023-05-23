@@ -31,6 +31,6 @@ CREATE TABLE Buku (
     genre ENUM ("Fantasi", "Horror", "Romantis", "Historical", "Biografi", "Memoir", "Ensiklopedia", "Sains") NOT NULL,
     chapter TINYINT UNSIGNED NOT NULL,
     halaman SMALLINT UNSIGNED NOT NULL,
-    rating SMALLINT(5) NOT NULL
+    rating TINYINT(5) UNSIGNED NOT NULL,
     PRIMARY KEY (id)
 );
