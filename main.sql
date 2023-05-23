@@ -34,3 +34,13 @@ CREATE TABLE Buku (
     rating TINYINT(5) UNSIGNED NOT NULL,
     PRIMARY KEY (id)
 );
+
+DROP TABLE IF EXISTS Chapter;
+
+CREATE TABLE Chapter (
+    id INT NOT NULL,
+    judul VARCHAR(255) NOT NULL,
+    halaman INT NOT NULL,
+    judul INT NOT NULL,
+    PRIMARY KEY (id)
+);
