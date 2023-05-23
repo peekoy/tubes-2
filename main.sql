@@ -5,7 +5,7 @@ USE MyReading;
 DROP TABLE IF EXISTS User;
 
 CREATE TABLE User (
-    id INT,
+    id INT NOT NULL,
     nama VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     usia INT UNSIGNED NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE User (
 DROP TABLE IF EXISTS Penulis;
 
 CREATE TABLE Penulis (
-    id INT,
+    id INT NOT NULL,
     nama VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
@@ -24,7 +24,7 @@ CREATE TABLE Penulis (
 DROP TABLE IF EXISTS Buku;
 
 CREATE TABLE Buku (
-    id INT,
+    id INT NOT NULL,
     judul VARCHAR(255) NOT NULL,
     tahun_terbit INT NOT NULL,
     tipe ENUM ("Fiksi", "Non Fiksi") NOT NULL,
