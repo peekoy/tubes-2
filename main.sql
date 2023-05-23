@@ -2,24 +2,32 @@ CREATE DATABASE IF NOT EXISTS MyReading;
 
 USE MyReading;
 
-CREATE TABLE IF NOT EXISTS User (
+DROP TABLE IF EXISTS User;
+
+CREATE TABLE User (
     id INT,
     nama VARCHAR(255) NOT NULL,
-    usia INT NOT NULL,
-    PRIMARY KEY id
+    password VARCHAR(255) NOT NULL,
+    usia INT UNSIGNED NOT NULL,
+    genre_buku_minat ENUM ("Fantasi", "Horror", "Romantis", "Historical", "Biografi", "Memoir", "Ensiklopedia", "Sains"),
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS Penulis (
+DROP TABLE IF EXISTS Penulis;
+
+CREATE TABLE Penulis (
     id INT,
     nama VARCHAR(255) NOT NULL,
-    PRIMARY KEY id
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS Buku (
+DROP TABLE IF EXISTS Buku;
+
+CREATE TABLE Buku (
     id INT,
     judul VARCHAR(255) NOT NULL,
     tahun_terbit INT NOT NULL,
     tipe ENUM ("Fiksi", "Non Fiksi") NOT NULL,
     genre ENUM ("Fantasi", "Horror", "Romantis", "Historical", "Biografi", "Memoir", "Ensiklopedia", "Sains") NOT NULL,
-    PRIMARY KEY id
+    PRIMARY KEY (id)
 );
