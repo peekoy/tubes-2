@@ -29,8 +29,8 @@ CREATE TABLE Buku (
     tahun_terbit INT NOT NULL,
     tipe ENUM ("Fiksi", "Non Fiksi") NOT NULL,
     genre ENUM ("Fantasi", "Horror", "Romantis", "Historical", "Biografi", "Memoir", "Ensiklopedia", "Sains") NOT NULL,
-    chapter TINYINT,
-    halaman SMALLINT,
-    rating SMALLINT(5)
+    chapter TINYINT UNSIGNED NOT NULL,
+    halaman SMALLINT UNSIGNED NOT NULL,
+    rating SMALLINT(5) NOT NULL
     PRIMARY KEY (id)
 );
